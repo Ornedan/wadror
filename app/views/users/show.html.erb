@@ -20,6 +20,13 @@
   <% end %>
 </p>
 
+<h3>Member of:</h3>
+<ul>
+  <% @user.beer_clubs.each do |beer_club| %>
+    <li><%= link_to beer_club.name, beer_club %></li>
+  <% end %>
+</ul>
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
